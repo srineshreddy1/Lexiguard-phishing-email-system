@@ -1,0 +1,56 @@
+# =============================================================================
+# LexiGuard .gitignore - Secrets, Runtime State, and Environment Isolation
+# =============================================================================
+
+# Category B: Private Credentials & OAuth Tokens (NEVER COMMIT)
+credentials.json
+Credentials.json
+token.json
+client_secret*.json
+*.pem
+*.key
+
+# Category B: Environment Files (API Keys & Secrets)
+.env
+.env.local
+.env.*.local
+
+# Category B: Local SQLite Audit & Scan Databases
+*.db
+*.sqlite
+*.sqlite3
+lexiguard.db
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Temporary / Local Developer Files & Backups
+app_2.py
+scratch/
+tmp/
+*.log
+*.tmp
+*.bak
+export_*.csv
+export_*.json
+
+# IDE / Operating System Junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

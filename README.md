@@ -103,7 +103,7 @@ sequenceDiagram
 
 ## 📂 File Hierarchy & Repository Architecture
 
-The project directory consists of **58 production files**, structured cleanly into modular sub-packages:
+The repository consists of **54 production files** (forming the complete 56-file enterprise system alongside the user's local `.env` and `credentials.json`), structured cleanly into modular sub-packages:
 
 ```
 LexiGuard/

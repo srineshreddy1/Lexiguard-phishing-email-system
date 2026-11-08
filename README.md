@@ -20,8 +20,7 @@
    - [Step 2: Category B Configuration (Secrets & Credentials)](#step-2-category-b-configuration-secrets--credentials)
    - [Step 3: Launching LexiGuard](#step-3-launching-lexiguard)
    - [Step 4: Using the Application](#step-4-using-the-application)
-6. [GitHub Repository Upload Instructions](#-github-repository-upload-instructions)
-7. [Automated Testing & Security Validation](#-automated-testing--security-validation)
+6. [Automated Testing & Security Validation](#-automated-testing--security-validation)
 
 ---
 
@@ -325,48 +324,6 @@ The web dashboard is divided into dedicated operations tabs:
 6. **Tab 6: Threat Memory & Compliance Exporter**
    - View historical scan logs and search threat signatures.
    - Export official compliance reports in **RFC 4180 CSV** or **Executive HTML** format with one click.
-
----
-
-## 🚀 GitHub Repository Upload Instructions
-
-Follow these exact steps to push LexiGuard to your personal GitHub repository:
-
-### 1. Ensure Git is Installed
-- **Windows:** Download and install [Git for Windows](https://git-scm.com/download/win).
-- **Linux:** `sudo apt-get install git`
-- **macOS:** `brew install git`
-
-### 2. Initialize Git and Stage Files
-Open your terminal in the `LexiGuard` directory:
-
-```bash
-# Initialize local git repository
-git init -b main
-
-# Verify .gitignore is active (Category B files will NOT be staged)
-git status
-
-# Add all files to staging
-git add .
-
-# Create the initial release commit
-git commit -m "feat: initial release of LexiGuard Enterprise Security Gateway v1.0"
-```
-
-### 3. Connect to Your GitHub Repository
-1. Go to [GitHub](https://github.com/new) and create a new repository named `LexiGuard` (leave "Initialize with README" unchecked).
-2. Link your local project to your GitHub repository:
-   ```bash
-   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/LexiGuard.git
-   ```
-3. Push all files to GitHub:
-   ```bash
-   git push -u origin main
-   ```
-
-> [!NOTE]
-> Thanks to our comprehensive `.gitignore`, your private Google OAuth tokens (`token.json`), client secrets (`credentials.json`), API keys (`.env`), and scan database (`lexiguard.db`) will **never** be pushed to GitHub. Other users will cleanly set up their own environments using `.env.example` and `credentials.json.example`.
 
 ---
 

@@ -14,13 +14,12 @@
 1. [System Architecture & Data Flow](#-system-architecture--data-flow)
 2. [File Hierarchy & Repository Architecture](#-file-hierarchy--repository-architecture)
 3. [Technologies, Libraries & Methods](#-technologies-libraries--methods)
-4. [Algorithmic Performance & Time Complexity ($O$-Notation)](#-algorithmic-performance--time-complexity-o-notation)
-5. [End-to-End User Manual & Quickstart](#-end-to-end-user-manual--quickstart)
+4. [End-to-End User Manual & Quickstart](#-end-to-end-user-manual--quickstart)
    - [Step 1: Prerequisites & Environment Setup](#step-1-prerequisites--environment-setup)
    - [Step 2: Category B Configuration (Secrets & Credentials)](#step-2-category-b-configuration-secrets--credentials)
    - [Step 3: Launching LexiGuard](#step-3-launching-lexiguard)
    - [Step 4: Using the Application](#step-4-using-the-application)
-6. [Automated Testing & Security Validation](#-automated-testing--security-validation)
+5. [Automated Testing & Security Validation](#-automated-testing--security-validation)
 
 ---
 
@@ -204,21 +203,6 @@ LexiGuard/
 
 ---
 
-## ⚡ Algorithmic Performance & Time Complexity ($O$-Notation)
-
-LexiGuard was engineered for ultra-fast local execution without requiring high-end GPUs or cloud clusters. The entire scanning pipeline operates in **linear time**:
-
-| Subsystem | Algorithm / Method | Time Complexity | Space Complexity | Explanation |
-| :--- | :--- | :--- | :--- | :--- |
-| **URL Decomposition** | RFC 3986 Lexical Tokenizer | $O(N)$ | $O(N)$ | Linear single-pass decomposition over URL string of length $N$. |
-| **Shannon Entropy** | $\displaystyle H(X) = -\sum_{i=1}^{k} P(x_i) \log_2 P(x_i)$ | $O(L)$ | $O(1)$ | Frequency histogram computation over token length $L$ (alphabet bounded $\le 256$). |
-| **HTML Steganography** | Recursive DOM Tree Traversal | $O(M)$ | $O(D)$ | Single-pass AST scan of $M$ HTML nodes with maximum DOM depth $D$. |
-| **Binary Magic-Bytes** | Header / Trailer Slice Probe | $O(1)$ | $O(1)$ | Direct inspection of the first 16 bytes and trailing 32 bytes of the file. |
-| **Polyglot & LSB Scan** | Byte stream EOF marker check | $O(B)$ | $O(1)$ | Linear scan over attachment byte size $B$ looking for embedded archive markers. |
-| **Threat Memory Lookup** | B-Tree Index Search on SQLite | $O(\log K)$ | $O(1)$ | B-Tree index lookup over $K$ known IOC signatures in SQLite. |
-| **Overall Inbox Ingestion** | Batch Pipeline Processing | $O(E \times (N + M + B))$ | $O(M + B)$ | Scans an inbox of $E$ emails in purely linear time relative to total email content. |
-
----
 
 ## 📖 End-to-End User Manual & Quickstart
 
